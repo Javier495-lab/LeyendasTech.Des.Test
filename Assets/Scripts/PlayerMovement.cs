@@ -6,8 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player speed")]
     public float moveSpeed = 5f;
 
-    [Header("Camera")]
-    public Transform cameraTransform; // arrástrala en el inspector
+    private Transform cameraTransform; // arrástrala en el inspector
 
     private CharacterController controller;
     private PlayerInput playerInput;
@@ -18,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions["Move"];
+        cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
     void OnEnable()
@@ -37,11 +37,10 @@ public class PlayerMovement : MonoBehaviour
         if (input.sqrMagnitude < 0.01f)
             return;
 
-        // Direcciones relativas a la cámara
+
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
 
-        // Eliminar componente Y (vertical)
         camForward.y = 0;
         camRight.y = 0;
         camForward.Normalize();
