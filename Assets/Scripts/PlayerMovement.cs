@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform cameraTransform; // arrástrala en el inspector
 
+    private bool canMove = true;
     private CharacterController controller;
     private PlayerInput playerInput;
     private InputAction moveAction;
@@ -30,8 +31,13 @@ public class PlayerMovement : MonoBehaviour
         moveAction.Disable();
     }
 
+    public void HabilitateMov()
+    {
+        canMove = !canMove;
+    }
     void Update()
     {
+        if (!canMove) return;
         Vector2 input = moveAction.ReadValue<Vector2>();
 
         if (input.sqrMagnitude < 0.01f)

@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetToFollow: {fileID: 706908047}
-  transparentAlpha: 0.1
+  transparentAlpha: 0.3
   checkInterval: 0.1
   obstructionMask:
     serializedVersion: 2
