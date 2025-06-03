@@ -31,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
         moveAction.Disable();
     }
 
-    public void HabilitateMov()
+    public void HabilitateMov(bool setMovement)
     {
-        canMove = !canMove;
+        canMove = setMovement;
     }
     void Update()
     {
