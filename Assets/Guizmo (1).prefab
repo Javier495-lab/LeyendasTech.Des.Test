@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4625695124366024235}
   - component: {fileID: 2206383885318864394}
   - component: {fileID: 5709708464043184959}
-  - component: {fileID: 2923530695419403901}
   - component: {fileID: 4775610234301893224}
   - component: {fileID: 6242363356098254072}
   m_Layer: 0
@@ -72,25 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78050613d6425204dae4ffd50d941e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleController: {fileID: 2923530695419403901}
+  puzzleController: {fileID: 0}
   outline: {fileID: 4775610234301893224}
   interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
---- !u!114 &2923530695419403901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511093626372704799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d314e6818dba8841a0d13b98fd5e56b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerDuration: 15
-  canIntercat: 1
-  timerText: {fileID: 0}
-  candleLight: {fileID: 4598582187994657820}
 --- !u!114 &4775610234301893224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,11 +210,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!108 &4598582187994657820 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 2854973356816296378, guid: bc3b3d170e36d4c2a8df6e4df72dcf11, type: 3}
-  m_PrefabInstance: {fileID: 1751782637130833318}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1945085237724095525
 PrefabInstance:
   m_ObjectHideFlags: 0

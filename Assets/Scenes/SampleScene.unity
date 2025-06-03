@@ -2500,14 +2500,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guizmo (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2923530695419403901, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 1623684218}
-    - target: {fileID: 2923530695419403901, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
-      propertyPath: interactAction
-      value: 
-      objectReference: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     - target: {fileID: 4625695124366024235, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.19
@@ -2548,6 +2540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5709708464043184959, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 1791739420}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7676,6 +7672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791739419}
+  - component: {fileID: 1791739420}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7698,6 +7695,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791739420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791739417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d314e6818dba8841a0d13b98fd5e56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerDuration: 15
+  canIntercat: 1
+  timerText: {fileID: 1623684218}
 --- !u!1001 &1800617783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8804,6 +8816,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5709708464043184959, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 1791739420}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
