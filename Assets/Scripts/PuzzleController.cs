@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class PuzzleController : MonoBehaviour
 {
@@ -9,13 +10,13 @@ public class PuzzleController : MonoBehaviour
     private Coroutine timerCoroutine;
 
     private bool puzzleCompleted = false;
+    [HideInInspector] public bool canIntercat = true;
 
     [Header("UI")]
     public TextMeshProUGUI timerText;
 
     [Header("Visual Indicator")]
     public Light candleLight;
-
     private float remainingTime;
 
     public void Interact(GameObject interactedObject)
@@ -24,6 +25,7 @@ public class PuzzleController : MonoBehaviour
 
         if (firstObject == null)
         {
+            canIntercat = false;
             candleLight.enabled = true;
             firstObject = interactedObject;
             timerCoroutine = StartCoroutine(TimerCoroutine());
@@ -31,6 +33,7 @@ public class PuzzleController : MonoBehaviour
         }
         else if (interactedObject != firstObject)
         {
+            canIntercat = false;
             candleLight.enabled = true;
             StopCoroutine(timerCoroutine);
             puzzleCompleted = true;
@@ -65,6 +68,7 @@ public class PuzzleController : MonoBehaviour
 
     private void ResetPuzzle()
     {
+        canIntercat = false;
         candleLight.enabled = false;
         firstObject = null;
         timerCoroutine = null;
