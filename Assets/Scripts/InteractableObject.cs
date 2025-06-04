@@ -5,11 +5,15 @@ using UnityEngine.InputSystem;
 public class InteractableObject : MonoBehaviour
 {
     public PuzzleController puzzleController;
-    public Outline outline;
+    private Outline outline;
 
     [Header("UI")]
     public InputActionReference interactAction;
-    
+
+    private void Awake()
+    {
+        outline = GetComponent<Outline>();
+    }
     public void Interact()
     {
         puzzleController.Interact(gameObject);
