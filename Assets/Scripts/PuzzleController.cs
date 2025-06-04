@@ -27,7 +27,6 @@ public class PuzzleController : MonoBehaviour
     {
         if (puzzleCompleted) return;
 
-        // Activación inicial
         if (firstActivated == null)
         {
             firstActivated = interactedObject;
@@ -35,7 +34,6 @@ public class PuzzleController : MonoBehaviour
             timerCoroutine = StartCoroutine(StartTimer());
             Debug.Log("Primer objeto activado.");
         }
-        // Segundo objeto distinto
         else if (interactedObject != firstActivated)
         {
             ActivateLight(interactedObject);
@@ -63,9 +61,8 @@ public class PuzzleController : MonoBehaviour
     {
         puzzleCompleted = true;
         endDialogueEvent.Invoke();
-        timerText.text = "";
+        timerText.text = ""; // seguro que hay mejores formas de hacerlo, pero esta es basante fácil para lo que es
         Debug.Log("¡Puzle completado!");
-        // Aquí podrías añadir eventos, efectos, sonidos, etc.
     }
 
     private void ResetPuzzle()
