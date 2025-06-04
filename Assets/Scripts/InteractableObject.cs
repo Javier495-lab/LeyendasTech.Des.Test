@@ -18,7 +18,6 @@ public class InteractableObject : MonoBehaviour
     // Solo para prueba con clic en el editor
     private void OnTriggerStay(Collider other)
     {
-        if (!puzzleController.canIntercat) return;
         DialogueUI.instance.ShowInteractionUI(true);
         outline.enabled = true;
          if (interactAction.action.IsPressed())

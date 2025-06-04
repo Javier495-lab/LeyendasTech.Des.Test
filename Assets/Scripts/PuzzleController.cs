@@ -2,74 +2,85 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PuzzleController : MonoBehaviour
 {
-    public float timerDuration = 15f;
-    private GameObject firstObject = null;
-    private Coroutine timerCoroutine;
-
-    private bool puzzleCompleted = false;
-    [HideInInspector] public bool canIntercat = true;
-
-    [Header("UI")]
+    [Header("References")]
+    public GameObject interactableA;
+    public GameObject interactableB;
+    public Light lightA;
+    public Light lightB;
     public TextMeshProUGUI timerText;
 
-    [Header("Visual Indicator")]
-    private float remainingTime;
+    [Header("Puzzle Timer")]
+    public float timerDuration = 15f;
+
+    [Header("Puzzle Event")]
+    public UnityEvent endDialogueEvent;
+
+    private GameObject firstActivated;
+    private Coroutine timerCoroutine;
+    private bool puzzleCompleted = false;
 
     public void Interact(GameObject interactedObject)
     {
         if (puzzleCompleted) return;
 
-        if (firstObject == null)
+        // Activación inicial
+        if (firstActivated == null)
         {
-            canIntercat = false;
-            //candleLight.enabled = true;
-            firstObject = interactedObject;
-            timerCoroutine = StartCoroutine(TimerCoroutine());
-            Debug.Log("Primer objeto activado. Inicia temporizador.");
+            firstActivated = interactedObject;
+            ActivateLight(interactedObject);
+            timerCoroutine = StartCoroutine(StartTimer());
+            Debug.Log("Primer objeto activado.");
         }
-        else if (interactedObject != firstObject)
+        // Segundo objeto distinto
+        else if (interactedObject != firstActivated)
         {
-            canIntercat = false;
-            //candleLight.enabled = true;
+            ActivateLight(interactedObject);
             StopCoroutine(timerCoroutine);
-            puzzleCompleted = true;
-            UpdateTimerUI(""); // Oculta texto
-            Debug.Log("¡Puzle completado!");
+            CompletePuzzle();
         }
     }
 
-    private IEnumerator TimerCoroutine()
+    private IEnumerator StartTimer()
     {
-        remainingTime = timerDuration;
+        float remaining = timerDuration;
 
-        while (remainingTime > 0f)
+        while (remaining > 0f)
         {
-            UpdateTimerUI(remainingTime.ToString("F1")); // Muestra 1 decimal
+            timerText.text = remaining.ToString("F1");
+            remaining -= Time.deltaTime;
             yield return null;
-            remainingTime -= Time.deltaTime;
         }
 
-        Debug.Log("Tiempo agotado. Reinicia el puzle.");
-        UpdateTimerUI(""); // Oculta texto
+        Debug.Log("Tiempo agotado. Reinicio.");
         ResetPuzzle();
     }
 
-    private void UpdateTimerUI(string text)
+    private void CompletePuzzle()
     {
-        if (timerText != null)
-        {
-            timerText.text = text;
-        }
+        puzzleCompleted = true;
+        endDialogueEvent.Invoke();
+        timerText.text = "";
+        Debug.Log("¡Puzle completado!");
+        // Aquí podrías añadir eventos, efectos, sonidos, etc.
     }
 
     private void ResetPuzzle()
     {
-        canIntercat = false;
-        //candleLight.enabled = false;
-        firstObject = null;
-        timerCoroutine = null;
+        firstActivated = null;
+        puzzleCompleted = false;
+        timerText.text = "";
+
+        if (lightA) lightA.enabled = false;
+        if (lightB) lightB.enabled = false;
+    }
+
+    private void ActivateLight(GameObject obj)
+    {
+        if (obj == interactableA && lightA) lightA.enabled = true;
+        if (obj == interactableB && lightB) lightB.enabled = true;
     }
 }
