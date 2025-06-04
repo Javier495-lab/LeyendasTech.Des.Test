@@ -1905,7 +1905,7 @@ MonoBehaviour:
   targetToFollow: {fileID: 706908047}
   transparentAlpha: 0.3
   checkInterval: 0.1
-  rayCount: 4
+  rayCount: 3
   horizontalSpread: 3
   obstructionMask:
     serializedVersion: 2
