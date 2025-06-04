@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8029147529761663565}
-  - component: {fileID: 7201383556232899686}
   - component: {fileID: 4020942914807094860}
   - component: {fileID: 6650768525382311611}
   - component: {fileID: 6944958265713658572}
+  - component: {fileID: 248400401879232988}
   m_Layer: 0
   m_Name: ButtonTemp
   m_TagString: Untagged
@@ -37,24 +37,6 @@ Transform:
   - {fileID: 6744645173199539323}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &7201383556232899686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5091864974291564402}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25b898771b973e4bb17877115dbc649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &4020942914807094860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea895896937cf7488b30d911e3055cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!114 &6650768525382311611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +84,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &248400401879232988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091864974291564402}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &4953952768052520233
 PrefabInstance:
   m_ObjectHideFlags: 0

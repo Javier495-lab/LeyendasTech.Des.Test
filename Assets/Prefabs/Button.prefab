@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6804519438691376657}
   - component: {fileID: 5968162771244064993}
-  - component: {fileID: 4427084202661449248}
   - component: {fileID: 7054093517480218928}
   - component: {fileID: 7082548602186166113}
+  - component: {fileID: 4121305758467943244}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -51,24 +51,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   puertas: []
---- !u!114 &4427084202661449248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5191026683720823622}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25b898771b973e4bb17877115dbc649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &7054093517480218928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +85,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4121305758467943244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191026683720823622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &7365079012612603014
 PrefabInstance:
   m_ObjectHideFlags: 0

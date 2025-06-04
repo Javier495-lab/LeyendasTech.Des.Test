@@ -10,21 +10,21 @@ public class DoorButton1 : MonoBehaviour
     private Outline outline;
 
     [SerializeField] private GameObject[] puertas;
-    private bool puertasAbiertas = false;
     private bool canInteract = true;
 
     void Awake()
     {
         outline = GetComponent<Outline>();
     }
+    
     public void Interact()
     {
-        puertasAbiertas = !puertasAbiertas;
-
         foreach (GameObject puerta in puertas)
         {
             if (puerta != null)
-                puerta.SetActive(puertasAbiertas);
+            {
+                puerta.SetActive(!puerta.activeSelf);
+            }
         }
     }
 

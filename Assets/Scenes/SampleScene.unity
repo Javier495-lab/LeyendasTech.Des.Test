@@ -1905,8 +1905,8 @@ MonoBehaviour:
   targetToFollow: {fileID: 706908047}
   transparentAlpha: 0.3
   checkInterval: 0.1
-  rayCount: 5
-  horizontalSpread: 3.5
+  rayCount: 4
+  horizontalSpread: 3
   obstructionMask:
     serializedVersion: 2
     m_Bits: 64
@@ -3227,17 +3227,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5709708464043184959, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5709708464043184959, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
       propertyPath: puzzleController
       value: 
       objectReference: {fileID: 1485048545}
-    - target: {fileID: 6379226038255401884, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4408,7 +4400,7 @@ Transform:
   m_GameObject: {fileID: 892785086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.16, y: 1, z: 1.23}
+  m_LocalPosition: {x: -2.66, y: 1, z: -2.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4435,7 +4427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6017721616644059880, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49.955112
+      value: -50.205112
       objectReference: {fileID: 0}
     - target: {fileID: 6017721616644059880, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7069,17 +7061,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 692846804}
     m_Modifications:
-    - target: {fileID: 4712410277678386254, guid: 2beaed3cef07a476194414324865b9e9, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 399dc56ca981dfe448ec3bd1ba95f6f6, type: 2}
     - target: {fileID: 6860920381619833217, guid: 2beaed3cef07a476194414324865b9e9, type: 3}
       propertyPath: m_Name
       value: WallStone (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596934186446289810, guid: 2beaed3cef07a476194414324865b9e9, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7596934186446289810, guid: 2beaed3cef07a476194414324865b9e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11545,7 +11529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029147529761663565, guid: afeb4bba21aee8f498367efb938d5b41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.982464
+      value: 3.7324638
       objectReference: {fileID: 0}
     - target: {fileID: 8029147529761663565, guid: afeb4bba21aee8f498367efb938d5b41, type: 3}
       propertyPath: m_LocalPosition.z
