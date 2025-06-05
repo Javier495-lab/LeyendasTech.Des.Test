@@ -42,6 +42,11 @@ public class DoorButton1 : MonoBehaviour
             outline.enabled = false;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        outline.enabled = false;
+        DialogueUI.instance.ShowInteractionUI(false);
+    }
 
     private IEnumerator Deelay()
     {

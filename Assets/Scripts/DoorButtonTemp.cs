@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class DoorButtonTemp : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class DoorButtonTemp : MonoBehaviour
     private float temporizador = 0f;
     private bool activadas = false;
     private Dictionary<GameObject, bool> estadosOriginales = new Dictionary<GameObject, bool>();
+
+    public TextMeshProUGUI timerText;
     void Awake()
     {
         outline = GetComponent<Outline>();
@@ -28,6 +31,7 @@ public class DoorButtonTemp : MonoBehaviour
         if (activadas)
         {
             temporizador -= Time.deltaTime;
+            timerText.text = temporizador.ToString("F1");
             if (temporizador <= 0f)
             {
                 RevertirPuertas();
@@ -64,6 +68,7 @@ public class DoorButtonTemp : MonoBehaviour
             if (puerta != null && estadosOriginales.ContainsKey(puerta))
             {
                 puerta.SetActive(estadosOriginales[puerta]);
+                timerText.text = "";
             }
         }
     }
@@ -80,6 +85,12 @@ public class DoorButtonTemp : MonoBehaviour
             canInteract = false;
             outline.enabled = false;
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        outline.enabled = false;
+        DialogueUI.instance.ShowInteractionUI(false);
     }
 
     private IEnumerator Deelay()
