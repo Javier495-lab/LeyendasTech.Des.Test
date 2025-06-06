@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3579555384320636163}
   - component: {fileID: 5228538848381360627}
   - component: {fileID: 2531127978017475570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6017721616644059880}
   - component: {fileID: 8012660568408391971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DoorArch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

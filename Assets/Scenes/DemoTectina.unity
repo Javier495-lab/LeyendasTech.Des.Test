@@ -5620,7 +5620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4625695124366024235, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 4625695124366024235, guid: ccffc90a96de00343981408cfe4aee5e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8996,10 +8996,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 585012658}
     m_Modifications:
-    - target: {fileID: 3878776418081711462, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6017721616644059880, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
       propertyPath: m_LocalPosition.x
       value: -50.205112
@@ -9044,14 +9040,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorArch (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7338725774730772731, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8012660568408391971, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
-      propertyPath: GameObject
-      value: 
-      objectReference: {fileID: 930575301}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9060,11 +9048,6 @@ PrefabInstance:
 --- !u!4 &930575300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6017721616644059880, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
-  m_PrefabInstance: {fileID: 930575299}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &930575301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3878776418081711462, guid: b42e1dd5cd2a945f9ab244cc46232601, type: 3}
   m_PrefabInstance: {fileID: 930575299}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &932294780
@@ -11719,7 +11702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6297276050750010171, guid: edbef89babaf5804fbfced3e199ce611, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6297276050750010171, guid: edbef89babaf5804fbfced3e199ce611, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21779,7 +21762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: edbef89babaf5804fbfced3e199ce611, type: 3}
       propertyPath: sentences.Array.data[0].sentence
-      value: "Algunosde los interactuables est\xE1n ocultos a simple vista."
+      value: "Algunos de los interactuables est\xE1n ocultos a simple vista."
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: edbef89babaf5804fbfced3e199ce611, type: 3}
       propertyPath: sentences.Array.data[1].sentence
